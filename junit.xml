@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="0.38">
-  <testsuite name="Server API" errors="0" failures="0" skipped="0" timestamp="2023-11-14T15:43:01" time="0.336" tests="4">
-    <testcase classname="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" name="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" time="0.011">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="0.386">
+  <testsuite name="Server API" errors="0" failures="0" skipped="0" timestamp="2023-11-14T15:54:29" time="0.341" tests="4">
+    <testcase classname="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" name="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" time="0.012">
     </testcase>
     <testcase classname="Server API Server starts on the correct PORT" name="Server API Server starts on the correct PORT" time="0">
     </testcase>
-    <testcase classname="Server API Server logs the startup message" name="Server API Server logs the startup message" time="0.001">
+    <testcase classname="Server API Server logs the startup message" name="Server API Server logs the startup message" time="0">
     </testcase>
     <testcase classname="Server API Fallback to default port if process.env.PORT is not set" name="Server API Fallback to default port if process.env.PORT is not set" time="0">
     </testcase>
