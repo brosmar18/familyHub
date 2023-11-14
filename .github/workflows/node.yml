@@ -20,8 +20,10 @@ jobs:
     - name: Set up environment variables
       run: |
         echo "MY_SECRET=${{ secrets.MY_SECRET }}" >> $GITHUB_ENV
+        echo "PORT=${{ secrets.MY_SECRET }}" >> $GITHUB_ENV
       env:
         MY_SECRET: ${{ secrets.MY_SECRET }}
+        PORT: ${{ secrets.MY_SECRET }}
     - name: npm install, build, and test
       run: |
         npm i
