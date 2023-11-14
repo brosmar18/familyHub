@@ -1,4 +1,3 @@
-// server.test.js
 const supertest = require('supertest');
 const { app, start } = require('../../src/server');
 const logger = require('../../src/utils/logger');
@@ -59,7 +58,4 @@ describe('Server API', () => {
         expect(listenMock).toHaveBeenCalledWith(5002, expect.any(Function)); 
         listenMock.mockRestore();
     });
-
-
-
 });
