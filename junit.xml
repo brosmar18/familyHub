@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="6" failures="0" errors="0" time="0.675">
-  <testsuite name="Server API" errors="0" failures="0" skipped="0" timestamp="2023-11-19T18:10:33" time="0.408" tests="4">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="0.722">
+  <testsuite name="Server API" errors="0" failures="0" skipped="0" timestamp="2023-11-19T18:15:03" time="0.51" tests="4">
     <testcase classname="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" name="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" time="0.012">
     </testcase>
     <testcase classname="Server API Server starts on the correct PORT" name="Server API Server starts on the correct PORT" time="0.001">
     </testcase>
-    <testcase classname="Server API Server logs the startup message" name="Server API Server logs the startup message" time="0.001">
+    <testcase classname="Server API Server logs the startup message" name="Server API Server logs the startup message" time="0">
     </testcase>
-    <testcase classname="Server API Fallback to default port if process.env.PORT is not set" name="Server API Fallback to default port if process.env.PORT is not set" time="0">
+    <testcase classname="Server API Fallback to default port if process.env.PORT is not set" name="Server API Fallback to default port if process.env.PORT is not set" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="404 Not Found Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-19T18:10:33" time="0.222" tests="2">
+  <testsuite name="404 Not Found Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-19T18:15:03" time="0.162" tests="2">
     <testcase classname="404 Not Found Handler should return 404 for an unknown GET route" name="404 Not Found Handler should return 404 for an unknown GET route" time="0.004">
     </testcase>
-    <testcase classname="404 Not Found Handler should return 404 for an unknown POST route" name="404 Not Found Handler should return 404 for an unknown POST route" time="0.001">
+    <testcase classname="404 Not Found Handler should return 404 for an unknown POST route" name="404 Not Found Handler should return 404 for an unknown POST route" time="0.002">
     </testcase>
   </testsuite>
 </testsuites>
