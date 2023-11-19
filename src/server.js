@@ -3,6 +3,13 @@
 const express = require('express');
 const logger = require('./utils/logger');
 
+// Error Handlers 
+const notFound = require('./handlers/404');
+const errorHandler = require('./handlers/500');
+
+
+const userRoutes = require('./routes/user');
+
 require('dotenv').config();
 
 const app = express();
@@ -10,6 +17,17 @@ const app = express();
 app.get('/', (req, res, next) => {
     res.status(200).send("Hello World!");
 });
+
+app.get('/error', (req, res, next) => {
+    // Trigger the 500 error handler for testing.
+    throw new Error('Forced Error for Testing');
+  });
+  
+
+app.use(userRoutes);
+
+app.use('*', notFound);
+app.use(errorHandler);
 
 const start = (port = process.env.PORT || 5002) => {
     app.listen(port, () => {
