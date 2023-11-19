@@ -12,6 +12,7 @@ const userRoutes = require('./routes/user');
 require('dotenv').config();
 
 const app = express();
+app.use(express.json());
 
 
 app.get('/', (req, res, next) => {
@@ -28,8 +29,6 @@ app.use(userRoutes);
 
 
 app.use('*', notFound);
-
-
 app.use(errorHandler);
 
 const start = (port = process.env.PORT || 5002) => {

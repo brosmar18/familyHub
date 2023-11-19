@@ -7,7 +7,7 @@ require('dotenv').config();
 
 // Handle graceful shutdown
 function gracefulShutdown(error) {
-    logger.error(error);
+    logger.error(error.message);
     sequelizeDatabase.close().then(() => {
         logger.info('Database Connection Closed.');
     }).finally(() => {
