@@ -3,15 +3,16 @@
 const logger = require('../utils/logger');
 
 module.exports = (req, res, next) => {
+
     const errorDetails = {
         error: 404,
-        route: req.path,
+        route: req.originalUrl,
         method: req.method,
         message: 'The requested resource was not found on this server.'
     };
 
     // Log the 404 error with the request details
-    logger.warn(`404 - Not Found - ${req.method} ${req.path}`);
+    logger.warn(`404 - Not Found - ${req.method} ${req.originalUrl}`);
 
     // Send the error details to the client in a clear format
     res.status(404).json(errorDetails);

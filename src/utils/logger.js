@@ -17,7 +17,7 @@ const fileFormat = winston.format.combine(
 
 // logger instance with separate transports for console and files
 const logger = winston.createLogger({
-    level: process.env.LOG_LEVEL || 'info', 
+    level: process.env.LOG_LEVEL || 'debug', 
     transports: [
         // Console transport for development
         new winston.transports.Console({

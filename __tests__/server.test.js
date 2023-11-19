@@ -1,9 +1,9 @@
 const supertest = require('supertest');
-const { app, start } = require('../../src/server');
-const logger = require('../../src/utils/logger');
+const { app, start } = require('../src/server');
+const logger = require('../src/utils/logger');
 
 // Mock the logger to prevent actual logging during tests
-jest.mock('../../src/utils/logger', () => ({
+jest.mock('../src/utils/logger', () => ({
     info: jest.fn(),
 }));
 
