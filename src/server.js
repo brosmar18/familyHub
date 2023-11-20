@@ -7,7 +7,7 @@ const logger = require('./utils/logger');
 const notFound = require('./handlers/404');
 const errorHandler = require('./handlers/500');
 
-const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/auth');
 
 require('dotenv').config();
 
