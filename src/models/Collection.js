@@ -64,9 +64,15 @@ class Collection {
                 throw new Error('Record not found or not deleted');
             }
         } catch (e) {
-            this.handleError('delete', e);
+            if (e.message !== 'Record not found or not deleted') {
+                this.handleError('delete', e);
+            } else {
+                throw e; 
+            }
         }
     }
+    
+    
 
     async findOne(options = {}) {
         try {
