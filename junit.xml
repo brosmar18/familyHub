@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="7" failures="0" errors="0" time="0.922">
-  <testsuite name="500 Error Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-19T20:20:48" time="0.556" tests="1">
-    <testcase classname="500 Error Handler should return 500 for a server error" name="500 Error Handler should return 500 for a server error" time="0.013">
+<testsuites name="jest tests" tests="12" failures="0" errors="0" time="1.05">
+  <testsuite name="Basic Authentication Middleware" errors="0" failures="0" skipped="0" timestamp="2023-11-20T01:18:21" time="0.38" tests="5">
+    <testcase classname="Basic Authentication Middleware authenticates valid credentials" name="Basic Authentication Middleware authenticates valid credentials" time="0.002">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware rejects invalid username" name="Basic Authentication Middleware rejects invalid username" time="0.001">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware rejects invalid password" name="Basic Authentication Middleware rejects invalid password" time="0.001">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware handles requests without authorization header" name="Basic Authentication Middleware handles requests without authorization header" time="0">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware handles errors during authentication" name="Basic Authentication Middleware handles errors during authentication" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Server API" errors="0" failures="0" skipped="0" timestamp="2023-11-19T20:20:49" time="0.16" tests="4">
-    <testcase classname="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" name="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" time="0.004">
+  <testsuite name="404 Not Found Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-20T01:18:21" time="0.307" tests="2">
+    <testcase classname="404 Not Found Handler should return 404 for an unknown GET route" name="404 Not Found Handler should return 404 for an unknown GET route" time="0.013">
     </testcase>
-    <testcase classname="Server API Server starts on the correct PORT" name="Server API Server starts on the correct PORT" time="0">
+    <testcase classname="404 Not Found Handler should return 404 for an unknown POST route" name="404 Not Found Handler should return 404 for an unknown POST route" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="500 Error Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-20T01:18:22" time="0.168" tests="1">
+    <testcase classname="500 Error Handler should return 500 for a server error" name="500 Error Handler should return 500 for a server error" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server API" errors="0" failures="0" skipped="0" timestamp="2023-11-20T01:18:22" time="0.151" tests="4">
+    <testcase classname="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" name="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" time="0.003">
+    </testcase>
+    <testcase classname="Server API Server starts on the correct PORT" name="Server API Server starts on the correct PORT" time="0.001">
     </testcase>
     <testcase classname="Server API Server logs the startup message" name="Server API Server logs the startup message" time="0">
     </testcase>
     <testcase classname="Server API Fallback to default port if process.env.PORT is not set" name="Server API Fallback to default port if process.env.PORT is not set" time="0">
-    </testcase>
-  </testsuite>
-  <testsuite name="404 Not Found Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-19T20:20:49" time="0.152" tests="2">
-    <testcase classname="404 Not Found Handler should return 404 for an unknown GET route" name="404 Not Found Handler should return 404 for an unknown GET route" time="0.004">
-    </testcase>
-    <testcase classname="404 Not Found Handler should return 404 for an unknown POST route" name="404 Not Found Handler should return 404 for an unknown POST route" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
