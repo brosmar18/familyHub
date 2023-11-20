@@ -7,7 +7,8 @@ const logger = require('./utils/logger');
 const notFound = require('./handlers/404');
 const errorHandler = require('./handlers/500');
 
-const userRoutes = require('./routes/auth');
+const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
 
 require('dotenv').config();
 
@@ -25,6 +26,7 @@ app.get('/error', (req, res, next) => {
 });
 
 
+app.use(authRoutes);
 app.use(userRoutes);
 
 

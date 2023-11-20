@@ -1,5 +1,5 @@
-const { sequelizeDatabase } = require('../models');
-const logger = require('../utils/logger'); 
+const { sequelizeDatabase } = require('../../models');
+const logger = require('../../utils/logger'); 
 
 module.exports = async (req, res, next) => {
   if (!req.headers.authorization) {
