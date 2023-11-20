@@ -37,6 +37,17 @@ router.put('/users/:id', bearerAuth, accessControl('update'), async (req, res) =
     }
 });
 
+// Create a new user 
+router.post('/users', bearerAuth, accessControl('create'), async (req, res) => {
+    try {
+        const newUser = await userCollection.create(req.body);
+        res.status(201).json(newUser);
+    } catch (e) {
+        res.status(500).send('Server error');
+    }
+});
+
+
 router.delete('/users/:id', bearerAuth, accessControl('delete'), async (req, res) => {
     try {
         await userCollection.delete(req.params.id);
