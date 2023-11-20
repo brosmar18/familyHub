@@ -9,6 +9,7 @@ const errorHandler = require('./handlers/500');
 
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
+const eventRoutes = require('./routes/event');
 
 require('dotenv').config();
 
@@ -28,6 +29,7 @@ app.get('/error', (req, res, next) => {
 
 app.use(authRoutes);
 app.use(userRoutes);
+app.use(eventRoutes);
 
 
 app.use('*', notFound);

@@ -5,7 +5,7 @@ const router = express.Router();
 const { userCollection } = require('../models');
 const bearerAuth = require('../middleware/auth/bearerAuth');
 const accessControl = require('../middleware/auth/accessControl');
-const basicAuth = require('../middleware/auth/basicAuth');
+
 
 // fetch all users
 router.get('/users', bearerAuth, accessControl('read'), async (req, res,) => {
