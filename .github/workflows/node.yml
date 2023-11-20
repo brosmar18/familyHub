@@ -14,9 +14,23 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Set up environment variables
+      run: |
+        echo "MY_SECRET=${{ secrets.MY_SECRET }}" >> $GITHUB_ENV
+        echo "PORT=${{ secrets.MY_SECRET }}" >> $GITHUB_ENV
+      env:
+        MY_SECRET: ${{ secrets.MY_SECRET }}
+        PORT: ${{ secrets.MY_SECRET }}
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
     - name: npm install, build, and test
       run: |
         npm i

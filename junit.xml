@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="59" failures="0" errors="0" time="1.803">
+  <testsuite name="Auth Routes" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:55" time="0.556" tests="5">
+    <testcase classname="Auth Routes POST /signup should create a new user successfully" name="Auth Routes POST /signup should create a new user successfully" time="0.015">
+    </testcase>
+    <testcase classname="Auth Routes POST /signup should return a 400 status for invalid signup data" name="Auth Routes POST /signup should return a 400 status for invalid signup data" time="0.002">
+    </testcase>
+    <testcase classname="Auth Routes POST /signup should handle errors during signup" name="Auth Routes POST /signup should handle errors during signup" time="0.001">
+    </testcase>
+    <testcase classname="Auth Routes POST /signin should sign in a user successfully" name="Auth Routes POST /signin should sign in a user successfully" time="0.002">
+    </testcase>
+    <testcase classname="Auth Routes POST /signin should handle errors during signin" name="Auth Routes POST /signin should handle errors during signin" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="500 Error Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:56" time="0.216" tests="1">
+    <testcase classname="500 Error Handler should return 500 for a server error" name="500 Error Handler should return 500 for a server error" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="Basic Authentication Middleware" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:56" time="0.203" tests="5">
+    <testcase classname="Basic Authentication Middleware authenticates valid credentials" name="Basic Authentication Middleware authenticates valid credentials" time="0.003">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware rejects invalid username" name="Basic Authentication Middleware rejects invalid username" time="0">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware rejects invalid password" name="Basic Authentication Middleware rejects invalid password" time="0">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware handles requests without authorization header" name="Basic Authentication Middleware handles requests without authorization header" time="0.001">
+    </testcase>
+    <testcase classname="Basic Authentication Middleware handles errors during authentication" name="Basic Authentication Middleware handles errors during authentication" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server API" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:56" time="0.171" tests="4">
+    <testcase classname="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" name="Server API Get / responds with status code 200 and message &quot;Hello World!&quot;" time="0.007">
+    </testcase>
+    <testcase classname="Server API Server starts on the correct PORT" name="Server API Server starts on the correct PORT" time="0">
+    </testcase>
+    <testcase classname="Server API Server logs the startup message" name="Server API Server logs the startup message" time="0">
+    </testcase>
+    <testcase classname="Server API Fallback to default port if process.env.PORT is not set" name="Server API Fallback to default port if process.env.PORT is not set" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="404 Not Found Handler" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:56" time="0.169" tests="2">
+    <testcase classname="404 Not Found Handler should return 404 for an unknown GET route" name="404 Not Found Handler should return 404 for an unknown GET route" time="0.004">
+    </testcase>
+    <testcase classname="404 Not Found Handler should return 404 for an unknown POST route" name="404 Not Found Handler should return 404 for an unknown POST route" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="User Routes" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:56" time="0.114" tests="10">
+    <testcase classname="User Routes GET /users should return all users" name="User Routes GET /users should return all users" time="0.004">
+    </testcase>
+    <testcase classname="User Routes GET /users should handle errors" name="User Routes GET /users should handle errors" time="0.001">
+    </testcase>
+    <testcase classname="User Routes GET /users/:id should return a specific user" name="User Routes GET /users/:id should return a specific user" time="0.001">
+    </testcase>
+    <testcase classname="User Routes GET /users/:id should handle errors" name="User Routes GET /users/:id should handle errors" time="0.001">
+    </testcase>
+    <testcase classname="User Routes POST /users should create a new user" name="User Routes POST /users should create a new user" time="0.006">
+    </testcase>
+    <testcase classname="User Routes POST /users should handle errors" name="User Routes POST /users should handle errors" time="0.001">
+    </testcase>
+    <testcase classname="User Routes PUT /users/:id should update a specific user" name="User Routes PUT /users/:id should update a specific user" time="0.001">
+    </testcase>
+    <testcase classname="User Routes PUT /users/:id should handle errors" name="User Routes PUT /users/:id should handle errors" time="0.001">
+    </testcase>
+    <testcase classname="User Routes DELETE /users/:id should delete a specific user" name="User Routes DELETE /users/:id should delete a specific user" time="0.001">
+    </testcase>
+    <testcase classname="User Routes DELETE /users/:id should handle errors" name="User Routes DELETE /users/:id should handle errors" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="User Model" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:56" time="0.118" tests="8">
+    <testcase classname="User Model Model Initialization should initialize with correct attributes" name="User Model Model Initialization should initialize with correct attributes" time="0.002">
+    </testcase>
+    <testcase classname="User Model Virtual Fields should create a valid token" name="User Model Virtual Fields should create a valid token" time="0">
+    </testcase>
+    <testcase classname="User Model Virtual Fields should not allow setting the token directly" name="User Model Virtual Fields should not allow setting the token directly" time="0.001">
+    </testcase>
+    <testcase classname="User Model Virtual Fields should return correct capabilities" name="User Model Virtual Fields should return correct capabilities" time="0">
+    </testcase>
+    <testcase classname="User Model beforeCreate Hook should hash the password before creating a user" name="User Model beforeCreate Hook should hash the password before creating a user" time="0">
+    </testcase>
+    <testcase classname="User Model authenticateBearer Method should authenticate user with a valid token" name="User Model authenticateBearer Method should authenticate user with a valid token" time="0">
+    </testcase>
+    <testcase classname="User Model authenticateBearer Method should throw error for invalid token" name="User Model authenticateBearer Method should throw error for invalid token" time="0.002">
+    </testcase>
+    <testcase classname="User Model authenticateBearer Method should throw error if user is not found" name="User Model authenticateBearer Method should throw error if user is not found" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Event Routes" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:57" time="0.111" tests="10">
+    <testcase classname="Event Routes POST /events should create a new event" name="Event Routes POST /events should create a new event" time="0.006">
+    </testcase>
+    <testcase classname="Event Routes POST /events should handle errors on creating an event" name="Event Routes POST /events should handle errors on creating an event" time="0.002">
+    </testcase>
+    <testcase classname="Event Routes GET /events should return all events" name="Event Routes GET /events should return all events" time="0.001">
+    </testcase>
+    <testcase classname="Event Routes GET /events should handle errors on fetching all events" name="Event Routes GET /events should handle errors on fetching all events" time="0.001">
+    </testcase>
+    <testcase classname="Event Routes GET /events/:id should return a specific event by ID" name="Event Routes GET /events/:id should return a specific event by ID" time="0.001">
+    </testcase>
+    <testcase classname="Event Routes GET /events/:id should handle errors on fetching a specific event" name="Event Routes GET /events/:id should handle errors on fetching a specific event" time="0.001">
+    </testcase>
+    <testcase classname="Event Routes PUT /events/:id should update a specific event by ID" name="Event Routes PUT /events/:id should update a specific event by ID" time="0.001">
+    </testcase>
+    <testcase classname="Event Routes PUT /events/:id should handle errors on updating an event" name="Event Routes PUT /events/:id should handle errors on updating an event" time="0.001">
+    </testcase>
+    <testcase classname="Event Routes DELETE /events/:id should delete a specific event by ID" name="Event Routes DELETE /events/:id should delete a specific event by ID" time="0.001">
+    </testcase>
+    <testcase classname="Event Routes DELETE /events/:id should handle errors on deleting an event" name="Event Routes DELETE /events/:id should handle errors on deleting an event" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="Collection class" errors="0" failures="0" skipped="0" timestamp="2023-11-20T19:56:57" time="0.074" tests="14">
+    <testcase classname="Collection class create method should successfully create a record" name="Collection class create method should successfully create a record" time="0.001">
+    </testcase>
+    <testcase classname="Collection class create method should handle errors in create method" name="Collection class create method should handle errors in create method" time="0.007">
+    </testcase>
+    <testcase classname="Collection class read method should successfully read a record by id" name="Collection class read method should successfully read a record by id" time="0">
+    </testcase>
+    <testcase classname="Collection class read method should successfully read all records" name="Collection class read method should successfully read all records" time="0">
+    </testcase>
+    <testcase classname="Collection class read method should handle errors in read method" name="Collection class read method should handle errors in read method" time="0.001">
+    </testcase>
+    <testcase classname="Collection class update method should successfully update a record" name="Collection class update method should successfully update a record" time="0">
+    </testcase>
+    <testcase classname="Collection class update method should handle record not found in update method" name="Collection class update method should handle record not found in update method" time="0">
+    </testcase>
+    <testcase classname="Collection class delete method should successfully delete a record" name="Collection class delete method should successfully delete a record" time="0">
+    </testcase>
+    <testcase classname="Collection class delete method should handle record not found or not deleted in delete method" name="Collection class delete method should handle record not found or not deleted in delete method" time="0.001">
+    </testcase>
+    <testcase classname="Collection class delete method should handle record not found or not deleted in delete method" name="Collection class delete method should handle record not found or not deleted in delete method" time="0">
+    </testcase>
+    <testcase classname="Collection class delete method should handle unexpected errors in delete method" name="Collection class delete method should handle unexpected errors in delete method" time="0">
+    </testcase>
+    <testcase classname="Collection class findOne method should successfully find a record" name="Collection class findOne method should successfully find a record" time="0">
+    </testcase>
+    <testcase classname="Collection class findOne method should handle errors in findOne method" name="Collection class findOne method should handle errors in findOne method" time="0.001">
+    </testcase>
+    <testcase classname="Collection class findOne method should successfully find a record with default options" name="Collection class findOne method should successfully find a record with default options" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>
