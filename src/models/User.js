@@ -6,8 +6,7 @@ const logger = require('../utils/logger');
 
 require('dotenv').config();
 const SECRET = process.env.SECRET || 'secretString';
-const BCRYPT_SALT_ROUNDS = parseInt(process.env.BCRYPT_SALT_ROUNDS) || 10; 
-const JWT_EXPIRATION = process.env.JWT_EXPIRATION || '15h'; 
+
 
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
@@ -36,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
         token: {
             type: DataTypes.VIRTUAL,
             get() {
-                return jwt.sign({ username: this.username }, SECRET, { expiresIn: JWT_EXPIRATION });
+                return jwt.sign({ username: this.username }, SECRET, { expiresIn: '15h' });
             },
             set(tokenValue) {
                 // Set token should not re-generate the token
@@ -58,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {
         hooks: {
             beforeCreate: async (user) => {
-                const hashedPassword = await bcrypt.hash(user.password, BCRYPT_SALT_ROUNDS);
+                const hashedPassword = await bcrypt.hash(user.password, 10);
                 logger.info('Hashed password in beforeCreate');
                 user.password = hashedPassword;
             }
